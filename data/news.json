@@ -1,0 +1,30 @@
+[
+  {
+    "id": "news-1",
+    "title": "Media Club Wins Regional Film Competition",
+    "excerpt": "Our documentary project 'Voices' took first place at the Regional Student Film Festival.",
+    "content": "We're thrilled to announce that our documentary 'Voices' has won first place at the Regional Student Film Festival! The team spent months interviewing students and faculty to create this powerful piece about diverse perspectives in our school community. This achievement wouldn't have been possible without the dedication of our entire club.",
+    "date": "2026-01-18",
+    "author": "Sarah Johnson",
+    "imageUrl": "/images/news/film-competition.jpg",
+    "featured": true
+  },
+  {
+    "id": "news-2",
+    "title": "New Studio Equipment Arrives",
+    "excerpt": "State-of-the-art cameras and lighting gear will elevate our production quality.",
+    "content": "Thanks to generous funding from the school board, we've received brand new Sony cameras, professional lighting kits, and audio equipment. Our members are already experimenting with the new gear, and we can't wait to show you what we create next!",
+    "date": "2026-01-12",
+    "author": "Michael Chen",
+    "imageUrl": "/images/news/new-equipment.jpg",
+    "featured": true
+  },
+  {
+    "id": "news-3",
+    "title": "Upcoming Workshop: Video Editing Masterclass",
+    "excerpt": "Join us for an intensive workshop on advanced editing techniques with professional filmmaker Alex Rivera.",
+    "content": "On February 5th, we're hosting a special workshop led by award-winning filmmaker Alex Rivera. Members will learn advanced color grading, sound design, and storytelling techniques. Limited spots available - sign up in room 204!",
+    "date": "2026-01-08",
+    "author": "Emma Rodriguez"
+  }
+]

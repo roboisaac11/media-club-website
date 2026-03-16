@@ -1,36 +1,110 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Media Club Website
+
+A professional, creative showcase website for your school's Media Club, built with Next.js 14, TypeScript, Tailwind CSS, and Framer Motion.
+
+## Features
+
+- **Home Page**: Dynamic hero section with animations, featured videos, designs, and latest news
+- **Videos**: Filterable gallery of promotional videos, interviews, and other content
+- **Designs**: Portfolio showcase of graphic designs and creative work
+- **Merchandise**: Product catalog featuring apparel and 3D printed items
+- **News**: Blog-style feed with club achievements and announcements
+- **About**: Mission statement, values, and team information
+- **Contact**: Contact form and club information
+
+## Tech Stack
+
+- **Framework**: Next.js 14 (App Router)
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **Animations**: Framer Motion
+- **Icons**: Lucide React
+- **Fonts**: Inter (Google Fonts)
 
 ## Getting Started
 
-First, run the development server:
+### Development
+
+Run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser to see the website.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Building for Production
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Build the optimized production version:
 
-## Learn More
+```bash
+npm run build
+```
 
-To learn more about Next.js, take a look at the following resources:
+Start the production server:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+npm start
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Customization
 
-## Deploy on Vercel
+### Update Content
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Edit the JSON files in the `data/` directory:
+- `videos.json` - Add/edit video content
+- `designs.json` - Add/edit design portfolio items
+- `merch.json` - Add/edit merchandise products
+- `news.json` - Add/edit news articles
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Add Images
+
+Place your images in the `public/images/` directory and reference them in the JSON files:
+```json
+{
+  "imageUrl": "/images/your-image.jpg"
+}
+```
+
+### Update Colors
+
+The site uses a purple/pink gradient theme. To change colors, edit the Tailwind classes in the components.
+
+### Update Contact Information
+
+Edit the contact details in `app/contact/page.tsx` and `components/layout/Footer.tsx`.
+
+## Deployment
+
+### Deploy to Vercel (Recommended)
+
+1. Push your code to GitHub
+2. Go to [vercel.com](https://vercel.com)
+3. Import your repository
+4. Deploy with one click
+
+### Other Platforms
+
+This is a standard Next.js app and can be deployed to any platform that supports Node.js applications.
+
+## Project Structure
+
+```
+media-club-website/
+├── app/                    # Next.js app directory
+│   ├── layout.tsx         # Root layout with header/footer
+│   ├── page.tsx           # Home page
+│   ├── about/             # About page
+│   ├── contact/           # Contact page
+│   ├── designs/           # Designs gallery page
+│   ├── merch/             # Merchandise page
+│   ├── news/              # News feed page
+│   └── videos/            # Videos gallery page
+├── components/            # React components
+│   ├── home/             # Home page components
+│   ├── layout/           # Header and Footer
+│   └── ui/               # UI components
+├── data/                 # JSON data files
+├── lib/                  # Utilities and types
+└── public/               # Static assets
+```

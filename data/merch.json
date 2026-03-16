@@ -1,0 +1,47 @@
+[
+  {
+    "id": "merch-1",
+    "name": "Media Club T-Shirt",
+    "description": "Premium cotton tee featuring our iconic logo design in black and white.",
+    "imageUrl": "/images/merch/tshirt.jpg",
+    "type": "apparel",
+    "price": "$20",
+    "available": true
+  },
+  {
+    "id": "merch-2",
+    "name": "School Logo Keychain",
+    "description": "3D printed keychain in school colors - perfect for backpacks and keys.",
+    "imageUrl": "/images/merch/keychain.jpg",
+    "type": "3d-print",
+    "price": "$5",
+    "available": true
+  },
+  {
+    "id": "merch-3",
+    "name": "Media Club Hoodie",
+    "description": "Cozy fleece hoodie with embroidered media club logo.",
+    "imageUrl": "/images/merch/hoodie.jpg",
+    "type": "apparel",
+    "price": "$35",
+    "available": true
+  },
+  {
+    "id": "merch-4",
+    "name": "Custom Phone Stand",
+    "description": "3D printed adjustable phone stand with sleek modern design.",
+    "imageUrl": "/images/merch/phone-stand.jpg",
+    "type": "3d-print",
+    "price": "$8",
+    "available": true
+  },
+  {
+    "id": "merch-5",
+    "name": "Media Club Sticker Pack",
+    "description": "Set of 10 high-quality vinyl stickers featuring our best designs.",
+    "imageUrl": "/images/merch/stickers.jpg",
+    "type": "accessory",
+    "price": "$6",
+    "available": true
+  }
+]

@@ -1,0 +1,44 @@
+[
+  {
+    "id": "video-1",
+    "title": "School Year 2026 Promo",
+    "description": "Our flagship promotional video showcasing the spirit and energy of our school community.",
+    "thumbnail": "/images/thumbnails/promo-2026.jpg",
+    "videoUrl": "/videos/promo-2026.mp4",
+    "category": "promo",
+    "date": "2026-01-15",
+    "duration": "2:30",
+    "featured": true
+  },
+  {
+    "id": "video-2",
+    "title": "Principal Interview: Innovation in Education",
+    "description": "An insightful conversation about the future of learning at our school.",
+    "thumbnail": "/images/thumbnails/principal-interview.jpg",
+    "videoUrl": "/videos/principal-interview.mp4",
+    "category": "interview",
+    "date": "2026-01-10",
+    "duration": "5:45",
+    "featured": true
+  },
+  {
+    "id": "video-3",
+    "title": "Behind the Scenes: Media Club",
+    "description": "A look into how we create our amazing content.",
+    "thumbnail": "/images/thumbnails/bts-media-club.jpg",
+    "videoUrl": "/videos/bts-media-club.mp4",
+    "category": "other",
+    "date": "2026-01-05",
+    "duration": "3:15"
+  },
+  {
+    "id": "video-4",
+    "title": "Student Life Highlights",
+    "description": "Capturing the best moments from this semester.",
+    "thumbnail": "/images/thumbnails/student-life.jpg",
+    "videoUrl": "/videos/student-life.mp4",
+    "category": "promo",
+    "date": "2025-12-20",
+    "duration": "4:00"
+  }
+]
