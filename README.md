@@ -4,9 +4,9 @@ A professional, creative showcase website for your school's Media Club, built wi
 
 ## Features
 
-- **Home Page**: Dynamic hero section with animations, featured videos, designs, and latest news
+- **Home Page**: Dynamic hero section with animations, featured videos, photos, and latest news
 - **Videos**: Filterable gallery of promotional videos, interviews, and other content
-- **Designs**: Portfolio showcase of graphic designs and creative work
+- **Photos**: Photography gallery showcasing school events, sports, and campus life
 - **Merchandise**: Product catalog featuring apparel and 3D printed items
 - **News**: Blog-style feed with club achievements and announcements
 - **About**: Mission statement, values, and team information
@@ -53,7 +53,7 @@ npm start
 
 Edit the JSON files in the `data/` directory:
 - `videos.json` - Add/edit video content
-- `designs.json` - Add/edit design portfolio items
+- `photos.json` - Add/edit photography items
 - `merch.json` - Add/edit merchandise products
 - `news.json` - Add/edit news articles
 
@@ -68,7 +68,7 @@ Place your images in the `public/images/` directory and reference them in the JS
 
 ### Update Colors
 
-The site uses a purple/pink gradient theme. To change colors, edit the Tailwind classes in the components.
+The site uses a dark mode theme with black/blue/silver colors and gold accents. To change colors, edit the Tailwind classes in the components or the CSS variables in `app/globals.css`.
 
 ### Update Contact Information
 
@@ -96,7 +96,7 @@ media-club-website/
 │   ├── page.tsx           # Home page
 │   ├── about/             # About page
 │   ├── contact/           # Contact page
-│   ├── designs/           # Designs gallery page
+│   ├── photos/            # Photos gallery page
 │   ├── merch/             # Merchandise page
 │   ├── news/              # News feed page
 │   └── videos/            # Videos gallery page

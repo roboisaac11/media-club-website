@@ -10,7 +10,7 @@ export interface Video {
   featured?: boolean;
 }
 
-export interface Design {
+export interface Photo {
   id: string;
   title: string;
   description: string;

@@ -7,11 +7,12 @@ import Image from 'next/image';
 
 export default function Hero() {
   return (
-    <section className="relative bg-linear-to-br from-black via-blue-950 to-slate-900 text-white overflow-hidden min-h-[600px] md:min-h-[700px]">
+    <section className="relative bg-linear-to-br from-black via-blue-950 to-slate-900 text-white overflow-hidden min-h-160 md:min-h-170">
       {/* Animated background elements */}
       <div className="absolute inset-0 opacity-20">
         <div className="absolute top-10 left-10 w-72 h-72 bg-blue-600 rounded-full blur-3xl animate-pulse" />
         <div className="absolute bottom-10 right-10 w-96 h-96 bg-cyan-600 rounded-full blur-3xl animate-pulse delay-700" />
+        
       </div>
 
       {/* Hero Image - Positioned behind content, down and to the right at an angle */}

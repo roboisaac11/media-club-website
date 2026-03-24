@@ -1,0 +1,36 @@
+[
+  {
+    "id": "photo-1",
+    "title": "School Spirit Week",
+    "description": "Capturing the energy and excitement of our annual Spirit Week celebrations.",
+    "imageUrl": "/images/photos/spirit-week.jpg",
+    "category": "Events",
+    "date": "2026-01-12",
+    "featured": true
+  },
+  {
+    "id": "photo-2",
+    "title": "Talent Show Highlights",
+    "description": "Behind the scenes and on-stage moments from the annual talent show.",
+    "imageUrl": "/images/photos/talent-show.jpg",
+    "category": "Events",
+    "date": "2026-01-08",
+    "featured": true
+  },
+  {
+    "id": "photo-3",
+    "title": "Campus Life",
+    "description": "Everyday moments that capture the essence of our school community.",
+    "imageUrl": "/images/photos/campus-life.jpg",
+    "category": "Daily Life",
+    "date": "2025-12-28"
+  },
+  {
+    "id": "photo-4",
+    "title": "Sports Champions",
+    "description": "Action shots and team portraits from our championship season.",
+    "imageUrl": "/images/photos/sports.jpg",
+    "category": "Sports",
+    "date": "2025-12-15"
+  }
+]

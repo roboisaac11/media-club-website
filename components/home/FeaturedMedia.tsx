@@ -2,17 +2,17 @@
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { Play, Image as ImageIcon, ArrowRight } from 'lucide-react';
-import { Video, Design } from '@/lib/types';
+import { Play, Camera, ArrowRight } from 'lucide-react';
+import { Video, Photo } from '@/lib/types';
 
 interface FeaturedMediaProps {
   videos: Video[];
-  designs: Design[];
+  photos: Photo[];
 }
 
-export default function FeaturedMedia({ videos, designs }: FeaturedMediaProps) {
+export default function FeaturedMedia({ videos, photos }: FeaturedMediaProps) {
   const featuredVideos = videos.filter(v => v.featured).slice(0, 2);
-  const featuredDesigns = designs.filter(d => d.featured).slice(0, 2);
+  const featuredPhotos = photos.filter(p => p.featured).slice(0, 2);
 
   return (
     <section className="py-20 bg-primary">
@@ -79,7 +79,7 @@ export default function FeaturedMedia({ videos, designs }: FeaturedMediaProps) {
           </div>
         </div>
 
-        {/* Featured Designs */}
+        {/* Featured Photos */}
         <div>
           <div className="flex justify-between items-end mb-12">
             <div>
@@ -89,14 +89,14 @@ export default function FeaturedMedia({ videos, designs }: FeaturedMediaProps) {
                 viewport={{ once: true }}
                 className="text-4xl md:text-5xl font-bold text-white mb-4"
               >
-                Featured Designs
+                Featured Photos
               </motion.h2>
               <p className="text-xl text-gray-400">
-                Explore our creative visual work
+                Explore our photography highlights
               </p>
             </div>
             <Link
-              href="/designs"
+              href="/photos"
               className="hidden md:flex items-center text-gold hover:text-cyan-300 font-semibold group"
             >
               View All
@@ -105,32 +105,32 @@ export default function FeaturedMedia({ videos, designs }: FeaturedMediaProps) {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {featuredDesigns.map((design, index) => (
+            {featuredPhotos.map((photo, index) => (
               <motion.div
-                key={design.id}
+                key={photo.id}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
                 className="group cursor-pointer"
               >
-                <Link href="/designs">
+                <Link href="/photos">
                   <div className="relative aspect-video bg-gradient-to-br from-blue-400 to-purple-400 rounded-2xl overflow-hidden mb-4 shadow-lg group-hover:shadow-2xl transition-all">
                     <div className="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-colors flex items-center justify-center">
-                      <ImageIcon className="w-16 h-16 text-white/70" />
+                      <Camera className="w-16 h-16 text-white/70" />
                     </div>
                   </div>
                   <div className="flex items-start justify-between">
                     <div>
                       <div className="flex items-center gap-2 mb-2">
-                        <span className="px-3 py-1 bg-blue-900/50 text-cyan-400 text-sm rounded-full font-medium border border-cyan-500/30">
-                          {design.category}
+                        <span className="px-3 py-1 bg-blue-900/50 text-gold text-sm rounded-full font-medium border border-gold/50">
+                          {photo.category}
                         </span>
                       </div>
                       <h3 className="text-xl font-bold text-white mb-2 group-hover:text-gold transition-colors">
-                        {design.title}
+                        {photo.title}
                       </h3>
-                      <p className="text-gray-300">{design.description}</p>
+                      <p className="text-gray-300">{photo.description}</p>
                     </div>
                   </div>
                 </Link>

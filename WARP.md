@@ -18,7 +18,7 @@ npm run lint     # Run ESLint
 This is a **Next.js 14 App Router** project with TypeScript. All routes are file-system based in `app/`:
 - `app/page.tsx` - Home page (/)
 - `app/videos/page.tsx` - Videos gallery (/videos)
-- `app/designs/page.tsx` - Designs portfolio (/designs)
+- `app/photos/page.tsx` - Photos gallery (/photos)
 - `app/merch/page.tsx` - Merchandise catalog (/merch)
 - `app/news/page.tsx` - News feed (/news)
 - `app/about/page.tsx` - About page (/about)
@@ -35,31 +35,34 @@ The site uses a **JSON-based static content system** (not a CMS or database):
 
 **Content Files:**
 - `data/videos.json` - Video content with categories (promo, interview, other)
-- `data/designs.json` - Design portfolio items
+- `data/photos.json` - Photography items with categories (Events, Daily Life, Sports, etc.)
 - `data/merch.json` - Merchandise products (types: apparel, 3d-print, accessory)
 - `data/news.json` - News articles with featured flag
 
 ### Type System
 All data types are centralized in `lib/types.ts`:
 - `Video` - includes category, thumbnail, videoUrl, featured flag
-- `Design` - includes category, imageUrl, featured flag
+- `Photo` - includes category, imageUrl, featured flag
 - `MerchItem` - includes type (apparel/3d-print/accessory), price, availability
 - `NewsItem` - includes excerpt, content, author, featured flag
 - `TeamMember` - includes role, bio, social links
 
 ### Component Structure
 **Layout components** (`components/layout/`):
-- `Header.tsx` - Fixed header with mobile menu using Framer Motion, purple/pink gradient theme
+- `Header.tsx` - Fixed header with mobile menu using Framer Motion, dark mode with blue/gold theme
 - `Footer.tsx` - Site footer
 
 **Home page components** (`components/home/`):
-- `Hero.tsx` - Animated hero section
-- `FeaturedMedia.tsx` - Displays featured videos and designs
+- `Hero.tsx` - Animated hero section with logo on left and angled image background
+- `FeaturedMedia.tsx` - Displays featured videos and photos
 - `RecentNews.tsx` - Shows recent news items
 
 ### Styling & Animation
 - **Tailwind CSS 4** for all styling (using `@tailwindcss/postcss`)
-- **Color scheme**: Purple-to-pink gradient (`from-purple-600 to-pink-600`)
+- **Color scheme**: Dark mode with black/blue/silver and gold (#e2bd00) accents
+  - Primary background: `bg-primary` (#0a0a0a)
+  - Gold highlights: `text-gold`, `border-gold` for accents
+  - Blue/cyan gradients for main elements
 - **Framer Motion** for animations (AnimatePresence, motion components)
 - **Lucide React** for icons
 - **Inter font** from Google Fonts via `next/font`
