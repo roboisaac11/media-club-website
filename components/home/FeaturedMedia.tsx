@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import Link from 'next/link';
 import { Play, Camera, ArrowRight } from 'lucide-react';
 import { Video, Photo } from '@/lib/types';
@@ -17,7 +18,6 @@ export default function FeaturedMedia({ videos, photos }: FeaturedMediaProps) {
   return (
     <section className="py-20 bg-primary">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Featured Videos */}
         <div className="mb-20">
           <div className="flex justify-between items-end mb-12">
             <div>
@@ -44,19 +44,25 @@ export default function FeaturedMedia({ videos, photos }: FeaturedMediaProps) {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {featuredVideos.map((video, index) => (
-              <motion.div
-                key={video.id}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className="group cursor-pointer"
-              >
-                <Link href="/videos">
-                  <div className="relative aspect-video bg-gradient-to-br from-blue-400 to-white-100 rounded-2xl overflow-hidden mb-4 shadow-lg group-hover:shadow-2xl transition-all">
-                    <div className="absolute inset-0 bg-black/40 group-hover:bg-black/30 transition-colors flex items-center justify-center">
-                      <div className="w-20 h-20 rounded-full bg-white/90 flex items-center justify-center group-hover:scale-110 transition-transform">
-                        <Play className="w-10 h-10 text-blue-600 ml-1" />
+              <Link key={video.id} href={`/videos/${video.id}`}>
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.1 }}
+                  className="group cursor-pointer"
+                >
+                  <div className="relative aspect-video rounded-2xl overflow-hidden mb-4 shadow-lg shadow-blue-500/10 group-hover:shadow-2xl group-hover:shadow-blue-500/20 transition-all border border-gray-800 group-hover:border-blue-500/50">
+                    <Image
+                      src={video.thumbnail}
+                      alt={video.title}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-300"
+                      priority
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent flex items-center justify-end p-4">
+                      <div className="w-16 h-16 rounded-full bg-gold/90 flex items-center justify-center group-hover:scale-110 transition-transform shadow-lg shadow-gold/25">
+                        <Play className="w-8 h-8 text-black ml-1" />
                       </div>
                     </div>
                     {video.duration && (
@@ -73,13 +79,12 @@ export default function FeaturedMedia({ videos, photos }: FeaturedMediaProps) {
                       <p className="text-gray-300">{video.description}</p>
                     </div>
                   </div>
-                </Link>
-              </motion.div>
+                </motion.div>
+              </Link>
             ))}
           </div>
         </div>
 
-        {/* Featured Photos */}
         <div>
           <div className="flex justify-between items-end mb-12">
             <div>

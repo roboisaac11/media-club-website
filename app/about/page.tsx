@@ -7,7 +7,7 @@ export default function AboutPage() {
   return (
     <div className="min-h-screen bg-primary">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-black via-blue-950 to-slate-900 text-white py-20">
+      <section className="bg-linear-to-br from-black via-blue-950 to-slate-900 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -95,7 +95,7 @@ export default function AboutPage() {
       </section>
 
       {/* Join Section */}
-      <section id="join" className="py-20 bg-gradient-to-br from-blue-950 via-slate-900 to-black text-white">
+      <section id="join" className="py-20 bg-linear-to-br from-blue-950 via-slate-900 to-black text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -110,7 +110,7 @@ export default function AboutPage() {
             </p>
             <a
               href="/contact"
-              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white rounded-xl font-bold text-lg hover:from-blue-700 hover:to-cyan-700 transition-all hover:scale-105"
+              className="inline-flex items-center px-8 py-4 bg-linear-to-r from-blue-600 to-cyan-600 text-white rounded-xl font-bold text-lg hover:from-blue-700 hover:to-cyan-700 transition-all hover:scale-105"
             >
               Get in Touch
             </a>
