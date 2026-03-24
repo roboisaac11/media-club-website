@@ -7,7 +7,7 @@ import Image from 'next/image';
 
 export default function Hero() {
   return (
-    <section className="relative bg-gradient-to-br from-black via-blue-950 to-slate-900 text-white overflow-hidden min-h-[600px] md:min-h-[700px]">
+    <section className="relative bg-linear-to-br from-black via-blue-950 to-slate-900 text-white overflow-hidden min-h-[600px] md:min-h-[700px]">
       {/* Animated background elements */}
       <div className="absolute inset-0 opacity-20">
         <div className="absolute top-10 left-10 w-72 h-72 bg-blue-600 rounded-full blur-3xl animate-pulse" />
@@ -32,6 +32,25 @@ export default function Hero() {
         </div>
       </motion.div>
 
+
+      {/* Iyanu Image */}
+      <motion.div
+        initial={{ opacity: 0, scale: 0.9, rotate: 170 }}
+        animate={{ opacity: 1, scale: 1.3, rotate: 180 }}
+        transition={{ duration: 0.8, delay: 0.2 }}
+        className="absolute top-32 md:top-24 left-0 md:left-10 lg:left-20 w-[70%] md:w-[55%] lg:w-[50%] max-w-2xl aspect-video z-0"
+      >
+        <div className="relative w-full h-full rounded-2xl overflow-hidden md:opacity-50">
+          <Image
+            src="/images/iyanu.png"
+            alt="Iyanu"
+            fill
+            className="object-cover"
+            priority
+          />
+        </div>
+      </motion.div>
+
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
           {/* Logo - Left side */}
@@ -41,10 +60,10 @@ export default function Hero() {
             transition={{ duration: 0.6 }}
             className="lg:col-span-3 flex justify-center lg:justify-start z-10"
           >
-            <div className="relative w-32 h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 bg-gradient-to-br from-blue-600 via-cyan-500 to-slate-400 p-1 rounded-3xl shadow-2xl border-2 border-gold shadow-gold/30">
+            <div className="relative w-32 h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 bg-linear-to-br from-blue-600 via-cyan-500 to-slate-400 p-1 rounded-3xl shadow-2xl border-2 border-gold shadow-gold/30">
               <div className="w-full h-full bg-black rounded-3xl flex items-center justify-center">
                 {/* Replace this placeholder with your logo image */}
-                {/* <div className="text-6xl md:text-7xl lg:text-8xl font-bold bg-gradient-to-r from-blue-400 via-gold to-cyan-400 bg-clip-text text-transparent">
+                {/* <div className="text-6xl md:text-7xl lg:text-8xl font-bold bg-linear-to-r from-blue-400 via-gold to-cyan-400 bg-clip-text text-transparent">
                   MC
                 </div> */}
                 <Image
@@ -77,11 +96,11 @@ export default function Hero() {
             <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold mb-6 leading-tight">
               Welcome to
               <br />
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-gold to-gray-100">
+            <span className="bg-clip-text text-transparent bg-linear-to-r from-gold to-gray-100">
               Knightvision
               <br />
             </span>
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-cyan-400">
+            <span className="bg-clip-text text-transparent bg-linear-to-r from-blue-400 to-cyan-400">
               Media Club
             </span>
             </h1>
@@ -93,7 +112,7 @@ export default function Hero() {
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
                 href="/videos"
-                className="group inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white rounded-xl font-bold text-lg hover:from-blue-700 hover:to-cyan-700 transition-all hover:scale-105 hover:shadow-2xl shadow-blue-500/50"
+                className="group inline-flex items-center justify-center px-8 py-4 bg-linear-to-r from-blue-600 to-cyan-600 text-white rounded-xl font-bold text-lg hover:from-blue-700 hover:to-cyan-700 transition-all hover:scale-105 hover:shadow-2xl shadow-blue-500/50"
               >
                 Watch Our Videos
                 <Play className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
